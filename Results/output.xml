@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on darwin)" generated="20201122 21:40:33.574" rpa="false">
+<suite id="s1" name="Tests" source="/Users/sanguine/Yellowcard/ycrobot/tests">
+<suite id="s1-s1" name="BuyAndSellBitCoin" source="/Users/sanguine/Yellowcard/ycrobot/tests/BuyAndSellBitCoin.robot">
+<test id="s1-s1-t1" name="A User Should Be Able To Buy BitCoin">
+<kw name="Activate Browser Session" library="CommonEvents" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20201122 21:40:33.720" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201122 21:40:33.720" endtime="20201122 21:40:35.618"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:35.619" level="INFO">Opening url 'https://testing.yellowcard.engineering/auth/login'</msg>
+<status status="PASS" starttime="20201122 21:40:35.618" endtime="20201122 21:40:39.995"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201122 21:40:39.995" endtime="20201122 21:40:40.154"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:33.719" endtime="20201122 21:40:40.154"></status>
+</kw>
+<kw name="I am logged in as a user" library="CommonEvents">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=${userfield}</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:40.155" level="INFO">Typing text '7086801724' into text field 'css=div#auth-login-phone &gt; .phone-input'.</msg>
+<status status="PASS" starttime="20201122 21:40:40.155" endtime="20201122 21:40:40.307"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=${wordfield}</arg>
+<arg>${access}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:40.308" level="INFO">Typing text 'Ojuolape11*' into text field 'css=input#reusable-inputs-placeHolder-password'.</msg>
+<status status="PASS" starttime="20201122 21:40:40.307" endtime="20201122 21:40:40.382"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:40.383" level="INFO">Clicking button 'login-login'.</msg>
+<status status="PASS" starttime="20201122 21:40:40.382" endtime="20201122 21:40:40.585"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=${otp}</arg>
+<arg>180s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:40:40.585" endtime="20201122 21:40:48.082"></status>
+</kw>
+<kw name="${i} IN RANGE [ 1 | 7 ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:48.082" level="INFO">Typing text '1' into text field 'css=li:nth-of-type(1) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:40:48.082" endtime="20201122 21:40:48.142"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:48.082" endtime="20201122 21:40:48.142"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:48.143" level="INFO">Typing text '2' into text field 'css=li:nth-of-type(2) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:40:48.142" endtime="20201122 21:40:48.200"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:48.142" endtime="20201122 21:40:48.200"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:48.200" level="INFO">Typing text '3' into text field 'css=li:nth-of-type(3) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:40:48.200" endtime="20201122 21:40:48.258"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:48.200" endtime="20201122 21:40:48.258"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:48.259" level="INFO">Typing text '4' into text field 'css=li:nth-of-type(4) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:40:48.259" endtime="20201122 21:40:48.314"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:48.259" endtime="20201122 21:40:48.314"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:48.314" level="INFO">Typing text '5' into text field 'css=li:nth-of-type(5) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:40:48.314" endtime="20201122 21:40:48.370"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:48.314" endtime="20201122 21:40:48.370"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:48.370" level="INFO">Typing text '6' into text field 'css=li:nth-of-type(6) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:40:48.370" endtime="20201122 21:40:48.429"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:48.370" endtime="20201122 21:40:48.429"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:48.082" endtime="20201122 21:40:48.429"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${confirm_otp}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:48.429" level="INFO">Clicking button 'confirmOTP-confirm'.</msg>
+<status status="PASS" starttime="20201122 21:40:48.429" endtime="20201122 21:40:48.489"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:40.154" endtime="20201122 21:40:48.489"></status>
+</kw>
+<kw name="I could see the dashboard" library="UserActions">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Balance}</arg>
+<arg>180s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:40:48.490" endtime="20201122 21:40:51.452"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${Balance}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:51.459" level="INFO">Current page contains text 'Portfolio Balance'.</msg>
+<status status="PASS" starttime="20201122 21:40:51.452" endtime="20201122 21:40:51.459"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:48.489" endtime="20201122 21:40:51.459"></status>
+</kw>
+<kw name="I clicked on" library="UserActions">
+<arguments>
+<arg>${buy_cryptocurrency}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:40:51.460" endtime="20201122 21:40:51.479"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:51.480" level="INFO">Clicking button 'home-buy'.</msg>
+<status status="PASS" starttime="20201122 21:40:51.480" endtime="20201122 21:40:51.523"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:51.460" endtime="20201122 21:40:51.523"></status>
+</kw>
+<kw name="I could see the currency options" library="UserActions">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${choose_currency}</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:40:51.524" endtime="20201122 21:40:52.580"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${choose_currency}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:52.587" level="INFO">Current page contains text 'Choose a currency'.</msg>
+<status status="PASS" starttime="20201122 21:40:52.580" endtime="20201122 21:40:52.587"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:51.524" endtime="20201122 21:40:52.588"></status>
+</kw>
+<kw name="I selected" library="UserActions">
+<arguments>
+<arg>css=${Bitcoin}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:52.588" level="INFO">Clicking element 'css=div:nth-of-type(3) &gt; .ListView .checkmark'.</msg>
+<status status="PASS" starttime="20201122 21:40:52.588" endtime="20201122 21:40:52.630"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:52.588" endtime="20201122 21:40:52.630"></status>
+</kw>
+<kw name="I inserted the amount" library="UserActions">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${amount_holder}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:40:52.631" endtime="20201122 21:40:52.657"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${amount_holder}</arg>
+<arg>${amount}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:52.657" level="INFO">Typing text '1000' into text field 'reusable-dropdown-listviews-amountEx-local'.</msg>
+<status status="PASS" starttime="20201122 21:40:52.657" endtime="20201122 21:40:52.744"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:52.631" endtime="20201122 21:40:52.744"></status>
+</kw>
+<kw name="I clicked on" library="UserActions">
+<arguments>
+<arg>${buy_bitcoin_review_button}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:40:52.745" endtime="20201122 21:40:52.972"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:52.973" level="INFO">Clicking button 'buy-review'.</msg>
+<status status="PASS" starttime="20201122 21:40:52.973" endtime="20201122 21:40:53.046"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:52.745" endtime="20201122 21:40:53.046"></status>
+</kw>
+<kw name="I could see the confirm pop up" library="UserActions">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${review_confirm}</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:40:53.047" endtime="20201122 21:40:53.056"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${review_confirm}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:53.063" level="INFO">Current page contains text 'Review and confirm'.</msg>
+<status status="PASS" starttime="20201122 21:40:53.056" endtime="20201122 21:40:53.063"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:53.047" endtime="20201122 21:40:53.064"></status>
+</kw>
+<kw name="I clicked on" library="UserActions">
+<arguments>
+<arg>${confirm_button}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:40:53.064" endtime="20201122 21:40:54.553"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:54.553" level="INFO">Clicking button 'reviewConfirm-withdraw'.</msg>
+<status status="PASS" starttime="20201122 21:40:54.553" endtime="20201122 21:40:54.598"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:53.064" endtime="20201122 21:40:54.598"></status>
+</kw>
+<kw name="I could see a transaction success message" library="UserActions">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${success_message}</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:40:54.599" endtime="20201122 21:40:56.921"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${success_message}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:56.935" level="INFO">Current page contains text 'successfully!'.</msg>
+<status status="PASS" starttime="20201122 21:40:56.921" endtime="20201122 21:40:56.935"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:54.598" endtime="20201122 21:40:56.935"></status>
+</kw>
+<kw name="I clicked on" library="UserActions">
+<arguments>
+<arg>${buy_done_button}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:40:56.936" endtime="20201122 21:40:56.952"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:56.953" level="INFO">Clicking button 'reusable-feedback-done'.</msg>
+<status status="PASS" starttime="20201122 21:40:56.953" endtime="20201122 21:40:57.008"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:56.935" endtime="20201122 21:40:57.008"></status>
+</kw>
+<kw name="I could see the dashboard" library="UserActions">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Balance}</arg>
+<arg>180s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:40:57.009" endtime="20201122 21:40:57.451"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${Balance}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:57.459" level="INFO">Current page contains text 'Portfolio Balance'.</msg>
+<status status="PASS" starttime="20201122 21:40:57.451" endtime="20201122 21:40:57.459"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:57.009" endtime="20201122 21:40:57.459"></status>
+</kw>
+<kw name="Deactivate Browser Session" library="CommonEvents" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201122 21:40:57.460" endtime="20201122 21:40:57.543"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:57.460" endtime="20201122 21:40:57.543"></status>
+</kw>
+<tags>
+<tag>per-01</tag>
+</tags>
+<status status="PASS" starttime="20201122 21:40:33.719" endtime="20201122 21:40:57.544" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="A User Should Be Able To Sell BitCoin">
+<kw name="Activate Browser Session" library="CommonEvents" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20201122 21:40:57.547" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201122 21:40:57.546" endtime="20201122 21:40:59.441"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20201122 21:40:59.442" level="INFO">Opening url 'https://testing.yellowcard.engineering/auth/login'</msg>
+<status status="PASS" starttime="20201122 21:40:59.442" endtime="20201122 21:41:08.115"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201122 21:41:08.115" endtime="20201122 21:41:08.270"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:40:57.546" endtime="20201122 21:41:08.271"></status>
+</kw>
+<kw name="I am logged in as a user" library="CommonEvents">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=${userfield}</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:08.272" level="INFO">Typing text '7086801724' into text field 'css=div#auth-login-phone &gt; .phone-input'.</msg>
+<status status="PASS" starttime="20201122 21:41:08.271" endtime="20201122 21:41:08.420"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=${wordfield}</arg>
+<arg>${access}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:08.420" level="INFO">Typing text 'Ojuolape11*' into text field 'css=input#reusable-inputs-placeHolder-password'.</msg>
+<status status="PASS" starttime="20201122 21:41:08.420" endtime="20201122 21:41:08.498"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:08.499" level="INFO">Clicking button 'login-login'.</msg>
+<status status="PASS" starttime="20201122 21:41:08.498" endtime="20201122 21:41:08.701"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=${otp}</arg>
+<arg>180s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:41:08.701" endtime="20201122 21:41:25.927"></status>
+</kw>
+<kw name="${i} IN RANGE [ 1 | 7 ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:25.928" level="INFO">Typing text '1' into text field 'css=li:nth-of-type(1) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:41:25.928" endtime="20201122 21:41:25.984"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:25.928" endtime="20201122 21:41:25.984"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:25.984" level="INFO">Typing text '2' into text field 'css=li:nth-of-type(2) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:41:25.984" endtime="20201122 21:41:26.047"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:25.984" endtime="20201122 21:41:26.047"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:26.048" level="INFO">Typing text '3' into text field 'css=li:nth-of-type(3) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:41:26.047" endtime="20201122 21:41:26.100"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:26.047" endtime="20201122 21:41:26.100"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:26.100" level="INFO">Typing text '4' into text field 'css=li:nth-of-type(4) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:41:26.100" endtime="20201122 21:41:26.157"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:26.100" endtime="20201122 21:41:26.157"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:26.158" level="INFO">Typing text '5' into text field 'css=li:nth-of-type(5) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:41:26.158" endtime="20201122 21:41:26.214"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:26.157" endtime="20201122 21:41:26.214"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=li:nth-of-type(${i}) &gt; .codeInput</arg>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:26.215" level="INFO">Typing text '6' into text field 'css=li:nth-of-type(6) &gt; .codeInput'.</msg>
+<status status="PASS" starttime="20201122 21:41:26.215" endtime="20201122 21:41:26.268"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:26.215" endtime="20201122 21:41:26.268"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:25.927" endtime="20201122 21:41:26.268"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${confirm_otp}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:26.268" level="INFO">Clicking button 'confirmOTP-confirm'.</msg>
+<status status="PASS" starttime="20201122 21:41:26.268" endtime="20201122 21:41:26.330"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:08.271" endtime="20201122 21:41:26.330"></status>
+</kw>
+<kw name="I could see the dashboard" library="UserActions">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Balance}</arg>
+<arg>180s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:41:26.331" endtime="20201122 21:41:32.858"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${Balance}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:32.865" level="INFO">Current page contains text 'Portfolio Balance'.</msg>
+<status status="PASS" starttime="20201122 21:41:32.859" endtime="20201122 21:41:32.865"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:26.330" endtime="20201122 21:41:32.866"></status>
+</kw>
+<kw name="I clicked on" library="UserActions">
+<arguments>
+<arg>${sell_cryptocurrency}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:41:32.866" endtime="20201122 21:41:32.883"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:32.884" level="INFO">Clicking button 'home-sell'.</msg>
+<status status="PASS" starttime="20201122 21:41:32.884" endtime="20201122 21:41:32.926"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:32.866" endtime="20201122 21:41:32.926"></status>
+</kw>
+<kw name="I could see the currency options" library="UserActions">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${choose_currency}</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:41:32.927" endtime="20201122 21:41:35.262"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${choose_currency}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:35.270" level="INFO">Current page contains text 'Choose a currency'.</msg>
+<status status="PASS" starttime="20201122 21:41:35.262" endtime="20201122 21:41:35.270"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:32.926" endtime="20201122 21:41:35.270"></status>
+</kw>
+<kw name="I selected" library="UserActions">
+<arguments>
+<arg>css=${Bitcoin}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:35.271" level="INFO">Clicking element 'css=div:nth-of-type(3) &gt; .ListView .checkmark'.</msg>
+<status status="PASS" starttime="20201122 21:41:35.271" endtime="20201122 21:41:35.309"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:35.271" endtime="20201122 21:41:35.310"></status>
+</kw>
+<kw name="I inserted the amount" library="UserActions">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${amount_holder}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:41:35.310" endtime="20201122 21:41:35.333"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${amount_holder}</arg>
+<arg>${amount}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:35.334" level="INFO">Typing text '1000' into text field 'reusable-dropdown-listviews-amountEx-local'.</msg>
+<status status="PASS" starttime="20201122 21:41:35.334" endtime="20201122 21:41:35.417"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:35.310" endtime="20201122 21:41:35.417"></status>
+</kw>
+<kw name="I clicked on" library="UserActions">
+<arguments>
+<arg>${sell_bitcoin_review_button}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:41:35.417" endtime="20201122 21:41:36.276"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:36.276" level="INFO">Clicking button 'reusable-button-button'.</msg>
+<status status="PASS" starttime="20201122 21:41:36.276" endtime="20201122 21:41:36.336"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:35.417" endtime="20201122 21:41:36.336"></status>
+</kw>
+<kw name="I could see the confirm pop up" library="UserActions">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${review_confirm}</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:41:36.337" endtime="20201122 21:41:36.345"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${review_confirm}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:36.352" level="INFO">Current page contains text 'Review and confirm'.</msg>
+<status status="PASS" starttime="20201122 21:41:36.346" endtime="20201122 21:41:36.352"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:36.336" endtime="20201122 21:41:36.352"></status>
+</kw>
+<kw name="I clicked on" library="UserActions">
+<arguments>
+<arg>${confirm_button}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:41:36.353" endtime="20201122 21:41:37.838"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:37.839" level="INFO">Clicking button 'reviewConfirm-withdraw'.</msg>
+<status status="PASS" starttime="20201122 21:41:37.838" endtime="20201122 21:41:37.884"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:36.353" endtime="20201122 21:41:37.884"></status>
+</kw>
+<kw name="I could see a transaction success message" library="UserActions">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${success_message}</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:41:37.885" endtime="20201122 21:41:45.476"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${success_message}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:45.486" level="INFO">Current page contains text 'successfully!'.</msg>
+<status status="PASS" starttime="20201122 21:41:45.476" endtime="20201122 21:41:45.486"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:37.885" endtime="20201122 21:41:45.486"></status>
+</kw>
+<kw name="I clicked on" library="UserActions">
+<arguments>
+<arg>${buy_done_button}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:41:45.487" endtime="20201122 21:41:45.503"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:45.504" level="INFO">Clicking button 'reusable-feedback-done'.</msg>
+<status status="PASS" starttime="20201122 21:41:45.503" endtime="20201122 21:41:45.724"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:45.486" endtime="20201122 21:41:45.724"></status>
+</kw>
+<kw name="I could see the dashboard" library="UserActions">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Balance}</arg>
+<arg>180s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 21:41:45.724" endtime="20201122 21:41:46.161"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${Balance}</arg>
+</arguments>
+<msg timestamp="20201122 21:41:46.169" level="INFO">Current page contains text 'Portfolio Balance'.</msg>
+<status status="PASS" starttime="20201122 21:41:46.161" endtime="20201122 21:41:46.169"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:45.724" endtime="20201122 21:41:46.169"></status>
+</kw>
+<kw name="Deactivate Browser Session" library="CommonEvents" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201122 21:41:46.170" endtime="20201122 21:41:46.254"></status>
+</kw>
+<status status="PASS" starttime="20201122 21:41:46.170" endtime="20201122 21:41:46.254"></status>
+</kw>
+<tags>
+<tag>per-02</tag>
+</tags>
+<status status="PASS" starttime="20201122 21:40:57.545" endtime="20201122 21:41:46.254" critical="yes"></status>
+</test>
+<doc>This is to test that the user can buy
+and sell BITCOIN</doc>
+<status status="PASS" starttime="20201122 21:40:33.595" endtime="20201122 21:41:46.255"></status>
+</suite>
+<status status="PASS" starttime="20201122 21:40:33.576" endtime="20201122 21:41:46.258"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">per-01</stat>
+<stat pass="1" fail="0">per-02</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" id="s1-s1" name="BuyAndSellBitCoin">Tests.BuyAndSellBitCoin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
