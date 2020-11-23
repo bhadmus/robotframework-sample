@@ -35,5 +35,5 @@ in the folder named Result
 
 The Script launches a bitcoin site (that has been redacted) and simulates the following processes
 * Login
-* Buy Cryptocurrency
-* Sell Cryptocurrency
+* Buy Cryptocurrency (Bitcoin)
+* Sell Cryptocurrency (Bitcoin)
